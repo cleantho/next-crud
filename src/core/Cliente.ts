@@ -3,13 +3,13 @@ export default class Cliente {
     #nome: string
     #idade: number
 
-    constructor(nome: string, idade: number, id: string | null = null){
+    constructor(nome: string, idade: number, id: string | null = null) {
         this.#id = id
         this.#nome = nome
         this.#idade = idade
     }
 
-    static vazio(){
+    static vazio() {
         return new Cliente('', 0)
     }
 
