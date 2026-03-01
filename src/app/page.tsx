@@ -1,5 +1,6 @@
 'use client'
 import Botao from "@/components/Botao";
+import Formulario from "@/components/Formulario";
 import Layout from "@/components/Layout";
 import Tabela from "@/components/Tabela";
 import Cliente from "@/core/Cliente";
@@ -23,7 +24,7 @@ export default function Home() {
   return (
     <div
       className={`
-      flex min-h-screen justify-center items-center
+      flex min-h-screen justify-center items-center      
       bg-linear-to-r from-blue-500 to-purple-400
       text-white
     `}
@@ -33,6 +34,7 @@ export default function Home() {
         <Botao cor="green" className={`mb-4`}>Novo Cliente</Botao>
         </div>
         <Tabela clientes={clientes} clienteSelecionado={selecionado} clienteExcluido={excluido}/>
+        <Formulario cliente={clientes[1]}></Formulario>
       </Layout>
     </div>
   );
